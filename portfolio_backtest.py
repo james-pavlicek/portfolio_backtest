@@ -651,10 +651,10 @@ if st.button('Calculate Results',type="primary"):
     #dfi.export(port_compare, 'portfolio_compare.png')
     #dfi.export(shopping_list, 'shopping_list.png')
 
-    if periodic_investment_amount > 1:
+    #if periodic_investment_amount > 1:
         #dfi.export(repurchase_list, 'repurchase_list.png')
-    else:
-        pass
+    #else:
+        #pass
 
 
 
