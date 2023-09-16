@@ -537,7 +537,7 @@ if st.button('Calculate Results',type="primary"):
     #Creates points on the efficient frontier for "Your Portfolio", the total stock market benchmark and the 75% stock / 25% bond portfolio
     eff_fig.add_scatter(x=[port_standard_deviation],
                         y=[port_return],
-                        marker=dict(color='yellow',size=15,symbol=217),name='Your Portfolio',line=dict(width=0,color='black'))
+                        marker=dict(color='gold',size=15,symbol=217),name='Your Portfolio',line=dict(width=0,color='black'))
 
     eff_fig.add_scatter(x=[benchmark_std],
                         y=[benchmark_ret],
