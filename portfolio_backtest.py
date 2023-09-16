@@ -684,7 +684,7 @@ if st.button('Calculate Results',type="primary"):
 
     #Print the portfolio comparison and stats on the PDF
     pdf.image("fig2.png",10,70,190)
-    pdf.image('portfolio_compare.png',15,210,190)
+    pdf.image('portfolio_compare.png',20,210,190)
     pdf.text(10,85, "Portfolio Performance")
     
     #Start of Page two on the PDF
@@ -702,10 +702,10 @@ if st.button('Calculate Results',type="primary"):
     #Prints the shopping list and recurring investment list onto the pdf
     pdf.image('shopping_list.png',10,163,190)
     pdf.set_font('Helvetica', '', 14)
-    pdf.text(15,158, "Stock Shopping List")
+    pdf.text(20,158, "Stock Shopping List")
 
     if periodic_investment_amount > 1:
-        pdf.text(15,210, f"Stock Repurchase List ({periodicity})")
+        pdf.text(20,210, f"Stock Repurchase List ({periodicity})")
         pdf.image('repurchase_list.png',10,215,150)
     else:
         pass
