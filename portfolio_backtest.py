@@ -602,7 +602,7 @@ if st.button('Calculate Results',type="primary"):
     compare_max_2 = benchmark["Benchmark"].max().round(2)
     compare_max_3 = sevenfive["75% Stock, 25% Bonds"].max().round(2)
 
-    portfolio_names = ("Your Portfolio       ", "Total Stock Market   ", "75% Stock / 25% Bonds")
+    portfolio_names = ("Your Portfolio", "Stock Market", "75/25 Portfolio")
 
     port_compare = pd.DataFrame({
         "Value" : ["${:,.2f}".format(compare_value_1), "${:,.2f}".format(compare_value_2), "${:,.2f}".format(compare_value_3)],
