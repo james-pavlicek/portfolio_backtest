@@ -648,13 +648,13 @@ if st.button('Calculate Results',type="primary"):
     fig3.write_image("fig3.png", engine='kaleido')
 
     #saves 3 dataframes as .png
-    #dfi.export(port_compare, 'portfolio_compare.png')
-    #dfi.export(shopping_list, 'shopping_list.png')
+    dfi.export(port_compare, 'portfolio_compare.png')
+    dfi.export(shopping_list, 'shopping_list.png')
 
-    #if periodic_investment_amount > 1:
-        #dfi.export(repurchase_list, 'repurchase_list.png')
-    #else:
-        #pass
+    if periodic_investment_amount > 1:
+        dfi.export(repurchase_list, 'repurchase_list.png')
+    else:
+        pass
 
 
 
@@ -684,7 +684,7 @@ if st.button('Calculate Results',type="primary"):
 
     #Print the portfolio comparison and stats on the PDF
     pdf.image("fig2.png",10,70,190)
-    #pdf.image('portfolio_compare.png',10,210,190)
+    pdf.image('portfolio_compare.png',10,210,190)
     pdf.text(10,85, "Portfolio Performance")
     
     #Start of Page two on the PDF
@@ -700,13 +700,13 @@ if st.button('Calculate Results',type="primary"):
     os.remove(temp_file2)
 
     #Prints the shopping list and recurring investment list onto the pdf
-    #pdf.image('shopping_list.png',10,163,190)
+    pdf.image('shopping_list.png',10,163,190)
     pdf.set_font('Helvetica', '', 14)
     pdf.text(10,158, "Stock Shopping List")
 
     if periodic_investment_amount > 1:
         pdf.text(10,210, f"Stock Repurchase List ({periodicity})")
-        #pdf.image('repurchase_list.png',10,215,150)
+        pdf.image('repurchase_list.png',10,215,150)
     else:
         pass
 
