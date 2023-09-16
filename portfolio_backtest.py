@@ -602,7 +602,7 @@ if st.button('Calculate Results',type="primary"):
     compare_max_2 = benchmark["Benchmark"].max().round(2)
     compare_max_3 = sevenfive["75% Stock, 25% Bonds"].max().round(2)
 
-    portfolio_names = ("Your Portfolio", "Total Stock Market", "  75% Stock / 25% Bonds")
+    portfolio_names = ("Your Portfolio", "Total Stock Market", "   75% Stock / 25% Bonds")
 
     port_compare = pd.DataFrame({
         "Value" : ["${:,.2f}".format(compare_value_1), "${:,.2f}".format(compare_value_2), "${:,.2f}".format(compare_value_3)],
@@ -684,7 +684,7 @@ if st.button('Calculate Results',type="primary"):
 
     #Print the portfolio comparison and stats on the PDF
     pdf.image("fig2.png",10,70,190)
-    pdf.image('portfolio_compare.png',20,210,180)
+    pdf.image('portfolio_compare.png',10,210,190)
     pdf.text(10,85, "Portfolio Performance")
     
     #Start of Page two on the PDF
