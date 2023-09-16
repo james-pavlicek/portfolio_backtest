@@ -602,7 +602,7 @@ if st.button('Calculate Results',type="primary"):
     compare_max_2 = benchmark["Benchmark"].max().round(2)
     compare_max_3 = sevenfive["75% Stock, 25% Bonds"].max().round(2)
 
-    portfolio_names = ("Your Portfolio", "Total Stock Market", "75/25 Portfolio")
+    portfolio_names = ("Your Portfolio", "100% Stock Portfolio", "75/25 Portfolio")
 
     port_compare = pd.DataFrame({
         "Value" : ["${:,.2f}".format(compare_value_1), "${:,.2f}".format(compare_value_2), "${:,.2f}".format(compare_value_3)],
@@ -700,13 +700,13 @@ if st.button('Calculate Results',type="primary"):
     os.remove(temp_file2)
 
     #Prints the shopping list and recurring investment list onto the pdf
-    pdf.image('shopping_list.png',20,163,190)
+    pdf.image('shopping_list.png',10,163,190)
     pdf.set_font('Helvetica', '', 14)
     pdf.text(10,158, "Stock Shopping List")
 
     if periodic_investment_amount > 1:
         pdf.text(10,210, f"Stock Repurchase List ({periodicity})")
-        pdf.image('repurchase_list.png',20,215,150)
+        pdf.image('repurchase_list.png',10,215,150)
     else:
         pass
 
