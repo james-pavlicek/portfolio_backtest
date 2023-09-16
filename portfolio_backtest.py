@@ -305,7 +305,7 @@ if st.button('Calculate Results',type="primary"):
                       "${:,.2f}".format(Amount6),
                       "${:,.2f}".format(Amount7),
                       "${:,.2f}".format(Amount8)],
-        'Amount (Shares)': [(Amount1/get_current_price(Ticker11)).round(2), 
+        'Shares': [(Amount1/get_current_price(Ticker11)).round(2), 
                            (Amount2/get_current_price(Ticker21)).round(2), 
                            (Amount3/get_current_price(Ticker31)).round(2),
                            (Amount4/get_current_price(Ticker41)).round(2),
@@ -602,7 +602,7 @@ if st.button('Calculate Results',type="primary"):
     compare_max_2 = benchmark["Benchmark"].max().round(2)
     compare_max_3 = sevenfive["75% Stock, 25% Bonds"].max().round(2)
 
-    portfolio_names = ("Your Portfolio", "Total Stock Market", "75% Stock / 25% Bond")
+    portfolio_names = ("Your Portfolio", "Total Stock Market", "75/25 Portfolio")
 
     port_compare = pd.DataFrame({
         "Value" : ["${:,.2f}".format(compare_value_1), "${:,.2f}".format(compare_value_2), "${:,.2f}".format(compare_value_3)],
