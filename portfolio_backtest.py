@@ -648,11 +648,11 @@ if st.button('Calculate Results',type="primary"):
     fig3.write_image("fig3.png", engine='kaleido')
 
     #saves 3 dataframes as .png
-    dfi.export(port_compare, 'portfolio_compare.png')
-    dfi.export(shopping_list, 'shopping_list.png')
+    dfi.export(port_compare, 'portfolio_compare.png',table_conversion='matplotlib')
+    dfi.export(shopping_list, 'shopping_list.png',table_conversion='matplotlib')
 
     if periodic_investment_amount > 1:
-        dfi.export(repurchase_list, 'repurchase_list.png')
+        dfi.export(repurchase_list, 'repurchase_list.png',table_conversion='matplotlib')
     else:
         pass
 
